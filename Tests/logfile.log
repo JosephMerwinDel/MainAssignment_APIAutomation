@@ -1,0 +1,36 @@
+2022-05-19 09:46:01,903 :INFO : test_user_is_created :Status code is 201.User created successfully
+2022-05-19 09:47:15,843 :INFO : test_user_is_created :Status code is 201.User created successfully
+2022-05-19 09:48:01,005 :INFO : test_user_is_created :Status code is 201.User created successfully
+2022-05-19 09:49:57,331 :INFO : test_user_is_created :Status code is 201.User created successfully
+2022-05-19 09:50:33,369 :INFO : test_user_is_created :Status code is 201.User created successfully
+2022-05-19 09:50:59,522 :INFO : test_user_is_created :Status code is 201.User created successfully
+2022-05-19 09:51:17,708 :INFO : test_user_is_created :Status code is 201.User created successfully
+2022-05-19 09:51:18,979 :INFO : test_user_is_created :Name: Test_User_FPP47Y
+ Email: test_uer_83120@hashedin.com
+
+2022-05-19 10:36:18,992 :INFO : test_user_is_created :Status code is 201.User created successfully
+2022-05-19 10:36:20,133 :INFO : test_user_is_created :Name: Test_User_S1VV40
+ Email: test_uer_39198@hashedin.com
+
+2022-05-19 10:36:22,576 :INFO : test_duplicate_user_creation :Status code :400
+2022-05-19 11:18:56,202 :ERROR : test_user_is_created :Cannot find header with name application/json in the response. All headers in the response: {'Server': 'Cowboy', 'Connection': 'keep-alive', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '362', 'Etag': 'W/"16a-Zuf1RsnU0NcK/9Okg9Zw072dICE"', 'Date': 'Thu, 19 May 2022 05:48:56 GMT', 'Via': '1.1 vegur'}
+Traceback (most recent call last):
+  File "/Users/jmerwin/PycharmProjects/MainAssignment_APITestAutomation/Tests/testcases.py", line 22, in test_user_is_created
+    Asserts.assert_response_has_headers(response, "application/json")
+  File "/Users/jmerwin/PycharmProjects/MainAssignment_APITestAutomation/Tests/asserts.py", line 56, in assert_response_has_headers
+    assert key in response.headers, \
+AssertionError: Cannot find header with name application/json in the response. All headers in the response: {'Server': 'Cowboy', 'Connection': 'keep-alive', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '362', 'Etag': 'W/"16a-Zuf1RsnU0NcK/9Okg9Zw072dICE"', 'Date': 'Thu, 19 May 2022 05:48:56 GMT', 'Via': '1.1 vegur'}
+2022-05-19 11:18:58,736 :INFO : test_duplicate_user_creation :Status code :400
+2022-05-19 11:21:37,770 :INFO : test_duplicate_user_creation :Status code :400
+2022-05-19 11:22:59,008 :ERROR : test_user_is_created :Cannot find header with name application/json in the response. All headers in the response: {'Server': 'Cowboy', 'Connection': 'keep-alive', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '362', 'Etag': 'W/"16a-ZVZOJvCixEW161IcvAPGQvOKEOo"', 'Date': 'Thu, 19 May 2022 05:52:59 GMT', 'Via': '1.1 vegur'}
+Traceback (most recent call last):
+  File "/Users/jmerwin/PycharmProjects/MainAssignment_APITestAutomation/Tests/testcases.py", line 22, in test_user_is_created
+    Asserts.assert_response_has_headers(response, 'application/json')
+  File "/Users/jmerwin/PycharmProjects/MainAssignment_APITestAutomation/Tests/asserts.py", line 56, in assert_response_has_headers
+    assert key in response.headers, \
+AssertionError: Cannot find header with name application/json in the response. All headers in the response: {'Server': 'Cowboy', 'Connection': 'keep-alive', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '362', 'Etag': 'W/"16a-ZVZOJvCixEW161IcvAPGQvOKEOo"', 'Date': 'Thu, 19 May 2022 05:52:59 GMT', 'Via': '1.1 vegur'}
+2022-05-19 11:26:43,471 :INFO : test_user_is_created :Status code is 201.User created successfully
+2022-05-19 11:26:44,653 :INFO : test_user_is_created :Name: Test_User_54XFVO
+ Email: test_uer_11220@hashedin.com
+
+2022-05-19 11:26:47,365 :INFO : test_duplicate_user_creation :Status code :400
