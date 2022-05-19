@@ -23,6 +23,10 @@ class APIRequest:
         response = requests.delete(url)
         return self.__get_responses(response)
 
+    def headers(self, token):
+        headers = {"Authorization": "Bearer {0}".format(token)}
+        return headers
+
     def __get_responses(self, response):
         status_code = response.status_code
         text = response.text

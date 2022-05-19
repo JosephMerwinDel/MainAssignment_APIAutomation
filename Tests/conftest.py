@@ -7,7 +7,6 @@ def config():
     pass
 
 
-
 @pytest.fixture()
 def setup(request, config):
     pass

@@ -7,7 +7,6 @@ class Asserts:
     def assert_equals(val1, val2, error_massage: str = ""):
         assert val1 == val2, f"Failed assertion that {val1} is equals {val2}. {error_massage}"
 
-
     @staticmethod
     def assert_code_status(response: Response, expected_code: int, message: str = ""):
         assert response.status_code == expected_code, \

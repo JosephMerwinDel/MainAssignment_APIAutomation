@@ -1,7 +1,7 @@
 import openpyxl
 from openpyxl.styles import Alignment
 
-path = f"/Users/jmerwin/PycharmProjects/MainAssignment_APITestAutomation/Utils/AddressDetails.xlsx"
+path = f"/Users/jmerwin/PycharmProjects/MainAssignment_APITestAutomation/Utils/UserData.xlsx"
 class XlsxReader:
 
     @staticmethod

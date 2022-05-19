@@ -1,10 +1,11 @@
 import random
 import string
 
+from POMObjects import endpoints
 from POMObjects.BaseClass import BaseApi
 from Utils.Methods import APIRequest
 from config import BASE_URL
-import  config
+import config
 import requests
 global access_token
 
@@ -25,13 +26,12 @@ class Users(BaseApi):
             "password": "12345678",
             "age": random.randint(20, 60)
         }
-        response = self.request.post("{0}/user/register".format(self.base_url), payload, self.headers)
+        response = self.request.post(endpoints.register_user.format(self.base_url), payload, self.headers)
         config.ACCESS_TOKEN = response.as_dict['token']
         return response
 
     def get_user(self):
-        self.headers = {"Authorization": "Bearer {0}".format(config.ACCESS_TOKEN)}
-        response = self.request.get("{0}/user/me".format(self.base_url), self.headers)
+        response = self.request.get(endpoints.get_user.format(self.base_url), self.request.headers(config.ACCESS_TOKEN))
         return response
 
     def login(self):
@@ -39,7 +39,7 @@ class Users(BaseApi):
             "email": config.EMAIL,
             "password": "12345678"
         }
-        response = self.request.post("{0}/user/login".format(self.base_url), payload, self.headers)
+        response = self.request.post(endpoints.login.format(self.base_url), payload, self.headers)
         return response
 
     def duplicate_user(self, duplicate_payload):
@@ -49,6 +49,10 @@ class Users(BaseApi):
             "password": "12345678",
             "age": duplicate_payload["age"]
         }
-        response = self.request.post("{0}/user/register".format(self.base_url), payload, self.headers)
+        response = self.request.post(endpoints.register_user.format(self.base_url), payload, self.headers)
+        return response
+
+    def validate_token(self, token='abcd'):
+        response = self.request.get(endpoints.get_user.format(self.base_url), self.request.headers(token))
         return response
 
